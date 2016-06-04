@@ -27,6 +27,9 @@
 \usepackage{listings}
 \usepackage{color}
 
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
 \input{macros.tex}
 
 \begin{document}
@@ -207,7 +210,66 @@
 	
 	\hfil
 	
+	Below is an example:
+	
+	\hfil
+	
+	\begin{center}
+		\includegraphics[scale=0.5]{3}
+	\end{center}
+	
 
+\end{solution}
+
+
+\begin{solution} \textbf{Directed Graphs}\\
+
+The only way this can happen is if $u$ has all outgoing edges directed to a subgraph of $G$ which has already been visited. If all the nodes in the subgraph $G_1$ were visited before $u$, and $u$ is chosen next in the DFS, then it will form its own DFT since there are no new vertices it can visit. 
+
+
+\hfil
+
+
+Below is an example
+
+\hfil
+
+
+\begin{center}
+\begin{tikzpicture}
+
+\tikzset{vertex/.style = {shape=circle,draw,minimum size=4em}}
+\tikzset{edge/.style = {->,> = latex', draw, minimum size=4em}}
+
+\tikzstyle{every state}=[
+            draw = black,
+            thick,
+            fill = white,
+            minimum size = 4mm
+        ]
+% vertices
+
+\node[vertex] (a) at  (0,0) {$G_1$};
+\node[vertex] (b) at  (4,2) {$u$};
+\node[vertex] (c) at  (8,0) {$G_2$};
+
+%edges
+\draw[edge] (c) to (b);
+\draw[edge] (b) to (a);
+
+
+\end{tikzpicture}
+
+\end{center}
+
+	
+\end{solution}
+
+
+
+\begin{solution} \textbf{Topological Ordering} \\
+
+	First let us define what a topological sorting is. A topological order of a directed graph $G = (V, E)$ is an ordering of its nodes as $v_1, v_2, …, v_n$ so that for every edge $(vi, vj)$ we have $i < j$.
 	
 \end{solution}
 
