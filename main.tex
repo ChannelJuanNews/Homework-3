@@ -1,0 +1,150 @@
+% <--- percent sign starts a comment line in LaTeX
+
+%----------------------------------------------------------
+% This is a sample assignment .tex file. Put your name,
+% assignment number and the due date below, as shown.
+% Before you typeset your own assignment try to preview 
+% and print this one as follows:
+%	0. Make sure your LaTeX is installed
+%   1. Save this in a file, say HwSample.tex
+%	2. Save macros.tex (and other source files, if needed)
+%	3. Check the references to other source files in this file, make sure
+%		that they are in correct directories. Typically, I will have figures
+%		in the same directory, while macros.tex two levels up. But you can
+%		change it as you wish.
+%   4. Run LaTeX on HwSample.tex
+%	5. LaTeX will produce several files, including one file HwSample.pdf
+%	6. Use your pdf viewer to view/print HwSample.pdf
+% ------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+\usepackage{fullpage,graphicx,latexsym,picinpar,amsbsy,amsmath,amsfonts}
+\usepackage{scrextend}
+\usepackage{lipsum}% for demo only!
+\usepackage{listings}
+
+\input{macros.tex}
+
+\begin{document}
+	
+% v -- YOUR NAME and SID in the braces
+\student{Juan Ruelas}{861116223}  
+% v -- ASSIGNMENT NUMBER in the braces
+\assignment{1} 
+% v-- DUE DATE in the braces
+\duedate{Friday, June 3}  
+
+{\fontfamily{ptm}\selectfont 
+
+	\begin{center}
+		\Large \textbf{Disclaimer} \\
+	\end{center}
+	
+	\normalsize This assignment was pretty difficult and because so I have opted to make the explanations of the solutions as best as I can (i.e. layman's terms) since I find it WAY EASIER to understand the problems and present my solutions in a plain manner.
+	
+		\hfil
+		
+	After many many \textbf{MANY} hours of simply trying to understand the problem I found it would be best if I keep the jargon to the utmost minimum since it was the stupid jargon and "buzzwords" that have caused me the most pain during the course of this ENTIRE class. Thank you and I hope you appreciate my solutions. 
+}
+
+
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\lineacross
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{solution} \textbf{Consulting Firm} \\
+
+	\hfil
+	
+	\textbf{A}\\
+	
+	\hfil
+	
+	If our moving cost $M = 10$ and the number of operational months $n = 4$, then we have the table below to analyze.
+		
+		
+	\begin{center}
+		\begin{tabular}{ | c | c | c | c | c |}
+			 \hline  
+			 & Month1 & Month2 & Month3 & Month4 \\
+			\hline
+ 			NY & 1 & 3 	& 20 & 30\\ 
+ 			\hline
+ 			SF & 50 & 20 & 2 & 4\\  
+ 			\hline  
+		\end{tabular}
+	\end{center}
+	
+	We are given the optimal plan already, however
+	 
+	\textbf{B}\\
+	
+	\textbf{C}\\
+	
+	\textbf{D}\\
+\end{solution}
+
+
+\newpage
+\begin{solution} \textbf{Pretty Print}\\
+
+	The entire basis of this problem is to be able to take some text that is "not balanced" and turn it into text whose right margin is as ”even” as possible. Look below to see what I mean.
+		
+		\hfil
+		
+		\begin{center}
+			\begin{tabular}{ c c c}
+ 				\includegraphics[width=7cm]{images/unbalanced} & \rightarrow &  \includegraphics[width=7cm]{images/balanced}
+			\end{tabular}
+		\end{center}
+		
+	\hfil
+	
+	In order to accomplish this we will need to make use of dynamic programming. Here is the overview of how we will make use of this programming technique:
+	
+	\hfil
+	
+	\begin{itemize}
+  		\item Take the text and "tokenize" into a word list called $W$
+  		\item Create a matrix of size 
+	\end{itemize}
+	
+	
+	\hfil
+
+
+	\textbf{A: Recurrence Relation} \\
+	
+	In order to come up with a recurrence relation we need to understand what exactly is dependent on what. In other words, we need to understand what exactly we are computing and how the previous computation affects our current/next computation.
+	
+	
+	\hfil
+	
+	\textbf{B: The Algorithm} \\
+	In order to solve this problem we will divide this into two sub problems. The 1st subproblem will deal with using dynamic programming to create a table of slack lengths knows as our $slack-cost-table$. The second problem will deal with using the slack cost table to actually calculate the 
+	
+		
+	
+\end{solution}
+
+
+
+\begin{solution}
+	
+\end{solution}
+
+\end{document}
+
+
+
+
+
+
+
+
+
