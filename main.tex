@@ -125,7 +125,7 @@
 			\end{verbatim}				
 		\end{center} 
 		
-		As you can see from the figure above, since we define "even" to be the minimization of all the slacks of every line, we will have multiple "optimal" solutions. This is a problem since we can reproduce identical slack summations with different text patterns and as we can visually see, the pattern on the right appears to be more "even" than the left one. Because of this, we will define "even" to mean the summation of all the $slacks^2$. This will enable us to be greedy with our spaces and will force us to minimize the amount of slack on $every$ line. See below to see what I mean.
+		As you can see from the figure above, since we define "even" to be the minimization of all the slacks of every line, we will have multiple "optimal" solutions. This is a problem since we can reproduce identical slack summations with different text patterns and as we can visually see, the pattern on the right appears to be more "even" than the left one. Because of this, we will define "even" to mean the summation of all the $slacks^2$. This will enable us to be greedy with our spaces and will force us to minimize the amount of slack on $every$ line. Look below to see what I mean.
 		
 		\hfil
 		
@@ -137,20 +137,41 @@
 			\end{tabular}
 		\end{center}
 		
-		Therefore we can see that the optimal solution which minimizes the amount of slack on every line is the second solution. We will use this property to determine our recurrence relation.  
+		\hfil
+		
+		From this we can see that the optimal solution which minimizes the amount of slack on every line is the second solution. We will use this property of squaring the slack values to aid us in creating a recurrence relation. Essentially we will compute the minimum $slack^2$ for all combinations of words that fit within our row width (accounting for spaces where needed) and then find the "least cost slack" solution of each sub problem to determine our optimal solution for the pretty print. 
+		
+		\hfil
+		
+		
+		\begin{center}
+			\textbf{Recurrence Relation}: $OPT[n] = \displaystyle\min_{1\leq j \leq n} S^2_{i,n}+ OPT[j - 1])$
+		\end{center}
 		
 		
 		
-		\hfil 
-		
-		\textbf{Slack Squared}\\
-		
-		Since we can see that by calculating the summation of the slacks of each line will give us an  "optimal" solution, 
 	
 	\hfil
 	
 	\textbf{B: The Algorithm} \\
-	In order to solve this problem we will divide this into two sub problems. The 1st subproblem will deal with using dynamic programming to create a table of slack lengths knows as our $slack-cost-table$. The second problem will deal with using the slack cost table to actually calculate the 
+	
+	In order to begin the algorithm we need to understand what the recurrence relation itself is doing. It is returning to us the optimal solution on a subset of the word list $W$, and returns to us the least cost word arrangement which minimizes the amount of spaces used on a given line. We then use this to pre-compute all our values. Once we finish, we apply the same recurrence relation to our pre-computed values to find the optimal solution. We can break it down into 3 steps.  
+	
+	\begin{itemize}
+		\item Given our word list $W$, we generate another array $A$ of equal length $L$, but instead of every value being a word, it will be the length of the word.
+  		\item Generate a $slack^2$ matrix (adding spaces where needed) from $W$ of size $L \times L$ 
+  		\item Find the optimal solutions to our sub problems, keeping track of each solution and "marking" our array for line breaks (aka our traceback)
+	\end{itemize}
+	
+	Assume we generate an array of size $L \times L$, we can begin populating the $slacks^2$ of each subset of words $W = {w_1, w_2, w_3, w_4, ... , w_n }$, adding spaces where needed.
+	
+	
+	\begin{center}
+			\begin{lstlisting}
+			asdf = asdf
+		\end{lstlisting}
+	\end{center}
+
 	
 		
 	
