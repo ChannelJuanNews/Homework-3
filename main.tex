@@ -196,13 +196,18 @@
 	\hfil
 	
 
-
-
 \end{solution}
 
 
 
-\begin{solution}
+\begin{solution} \textbf{Baby Faces v.s. Heels}\\
+
+	This is a simple graph traversal problem that can be solved by running a BFS. Since we are given the number $n$ of professional wrestlers (nodes) a rivalry list $r$ (edges), we can create a graph $G$ by using the rivalry list to connect accordingly. Then we perform a BFS until we visit all vertices. Once we sort out the levels of connection, we can call all wrestlers who are on an even level "Babyfaces" and all wrestlers who are on an odd level "Heels". Once all wrestlers are assigned to their respective camps, we check each edge to verify that it only connects rivals. Because we know that a BFS has a O($V + E$) running time, we know that it will run in O($r + n$) time. 
+	
+	
+	\hfil
+	
+
 	
 \end{solution}
 
