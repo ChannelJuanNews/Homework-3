@@ -55,7 +55,6 @@
 	
 	\textbf{A}\\
 	
-	\hfil
 	
 	If our moving cost $M = 10$ and the number of operational months $n = 4$, then we have the table below to analyze.
 		
@@ -65,20 +64,85 @@
 			 \hline  
 			 & Month1 & Month2 & Month3 & Month4 \\
 			\hline
- 			NY & 1 & 3 	& 20 & 30\\ 
+ 			NY & 5 & 10 	& 5 & 10\\ 
  			\hline
- 			SF & 50 & 20 & 2 & 4\\  
+ 			SF & 10 & 5 & 10 & 5\\  
  			\hline  
 		\end{tabular}
 	\end{center}
 	
-	We are given the optimal plan already, however
+	We know the solution should be NY, NY, NY, NY with a total cost of \$30, but instead the solution given by the algorithm would be NY, SF, NY, SF and would cost \$50.
+	
+	\hfil
+	
 	 
 	\textbf{B}\\
 	
+	
+	If our moving cost $M = 10$ and the number of operational months $n = 4$, then we have the table below to analyze.
+		
+		
+	\begin{center}
+		\begin{tabular}{ | c | c | c | c | c |}
+			 \hline  
+			 & Month1 & Month2 & Month3 & Month4 \\
+			\hline
+ 			NY & 100 & 1 & 100 & 1\\ 
+ 			\hline
+ 			SF & 1 & 100 & 1 & 100\\  
+ 			\hline  
+		\end{tabular}
+	\end{center}
+	
+	In every month (excluding the first month) it is more profitable to change locations. 
+	
+	\hfil
+	
+	
 	\textbf{C}\\
 	
+	Lets say that we are operating for a total of $n$ months. There are only two outcomes by recursively calculating the cost. We will either end up in NY or in SF. Given that there are only two possible outcomes, let us denote the recurrence relations of both locations as $PN$ and $PS$
+	
+	\hfil
+		
+		We can then denote the optimal cost at any given month, $i$, from $1$ to $n$ as 
+		
+		\hfil
+		
+		\begin{center}
+			PN[i] =$N_i$ + $min$ \{ PN[i - 1], M + PS[i - 1]\} \\
+			PS[i] =$S_i$ + $min$ \{ PS[i - 1], M + PN[i - 1]\} \\
+				
+		\end{center}
+		
+		\hfil
+		
+		
+	
 	\textbf{D}\\
+	
+	
+	\definecolor{light-gray}{gray}{0.95}
+	\lstset{columns=fullflexible, basicstyle=\ttfamily,backgroundcolor=\color{light-gray},xleftmargin=0.1cm,frame=lr,framesep=8pt,framerule=0pt}
+    
+    
+	\begin{lstlisting}
+	
+	OptimalSolution:
+		PN[1] = N1
+		PS[1] = S1
+		for i in range (2, n):
+			PN[i] = Ni + min {PN[i - 1], M + PS[i - 1]}
+			PS[i] = Si + min {PS[i - 1], M + PN[i - 1]}
+		# After computing, return the traceback
+		return TraceBack(PN, PS) # this returns the optimal plan
+	
+		 
+	\end{lstlisting}
+
+	
+	
+	
 \end{solution}
 
 
@@ -266,10 +330,32 @@ Below is an example
 \end{solution}
 
 
-
+\newpage
 \begin{solution} \textbf{Topological Ordering} \\
 
-	First let us define what a topological sorting is. A topological order of a directed graph $G = (V, E)$ is an ordering of its nodes as $v_1, v_2, …, v_n$ so that for every edge $(vi, vj)$ we have $i < j$.
+	First let us define what topological sorting is.
+	
+	\hfil
+	
+	A topological order of a directed graph $G = (V, E)$ is an ordering of its nodes as $v_1, v_2, …, v_n$ so that for every edge $(vi, vj)$ we have $i < j$. However, we will be applying this in alphabetical terms instead of numerical terms.
+	
+	\hfil
+	
+	With the given graph we will be able to produce 6 unique topological orderings.
+	Below is the answer.
+	 
+	\begin{center}
+		\includegraphics[width=15cm]{topo.jpg}
+	\end{center}
+	
+	
+\end{solution}
+
+
+\begin{solution}\textbf{Clu Net}\\
+	
+	Because we are trying to maximize our bottleneck rate, we will want to find the maximum of the paths between $u$ and $v$. Since there are algorithms out there that do essentially the opposite, we can apply those same algorithms by modifying the weights. In order to do this, we will first traverse the graph in O(E) time and either negate (as in multiply by -1)  or the take the reciprocal of the bottleneck rate. After we do this slight modification we can now apply any algorithm to find a minimal spanning tree. Either Kruskals or Primms will give us the answer we want. 
+	
 	
 \end{solution}
 
