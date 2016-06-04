@@ -23,6 +23,7 @@
 \usepackage{scrextend}
 \usepackage{lipsum}% for demo only!
 \usepackage{listings}
+\usepackage{verbatimbox}
 
 \input{macros.tex}
 
@@ -112,12 +113,15 @@
 	
 		\begin{center}
 			\begin{verbatim}
-				                    0123456789                   0123456789
-				                    Ruelas    --> 4              Ruelas    --> 4
-				                    Juan is my--> 0      VS      Juan is   --> 3
-				                    name      --> 6              my name   --> 3
-				                    
-				                    4 + 0 + 6 = 10               4 + 3 + 3 = 10                                     	
+			                SOLUTION 1                             SOLUTION 2
+			
+				          Line  0123456789      Slack            Line  0123456789     Slack
+				          ---------------------------            --------------------------
+				           0    Ruelas      -->  4                0    Ruelas    -->   4
+				           1    Juan is my  -->  0       VS       1    Juan is   -->   3
+				           2    name        -->  6                2    my name   -->   3
+				           		                    
+				              4 + 0 + 6 = 10                         4 + 3 + 3 = 10                                     	
 			\end{verbatim}				
 		\end{center} 
 		
@@ -125,6 +129,15 @@
 		
 		\hfil
 		
+		
+		\begin{center}
+			\begin{tabular}{c c c}
+			    \textbf{SOLUTION 1}: 4 + 0 + 6 = 10 & VS & $4^2$ + $0^2$ + $6^2$ = 52 \\
+				\textbf{SOLUTION 2}: 4 + 3 + 3 = 10 & VS & $4^2$ + $3^2$ + $3^2$ = 34
+			\end{tabular}
+		\end{center}
+		
+		Therefore we can see that the optimal solution which minimizes the amount of slack on every line is the second solution. We will use this property to determine our recurrence relation.  
 		
 		
 		
