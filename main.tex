@@ -24,6 +24,8 @@
 \usepackage{lipsum}% for demo only!
 \usepackage{listings}
 \usepackage{verbatimbox}
+\usepackage{listings}
+\usepackage{color}
 
 \input{macros.tex}
 
@@ -159,22 +161,43 @@
 	
 	\begin{itemize}
 		\item Given our word list $W$, we generate another array $A$ of equal length $L$, but instead of every value being a word, it will be the length of the word.
-  		\item Generate a $slack^2$ matrix (adding spaces where needed) from $W$ of size $L \times L$ 
+  		\item Generate a $slack^2$ matrix (accounting for spaces where needed) from $A$ of size $L \times L$ 
   		\item Find the optimal solutions to our sub problems, keeping track of each solution and "marking" our array for line breaks (aka our traceback)
 	\end{itemize}
 	
-	Assume we generate an array of size $L \times L$, we can begin populating the $slacks^2$ of each subset of words $W = {w_1, w_2, w_3, w_4, ... , w_n }$, adding spaces where needed.
+	\hfil
 	
-	
-	\begin{center}
-			\begin{lstlisting}
-			asdf = asdf
-		\end{lstlisting}
-	\end{center}
-
-	
+		Look at the pseudo code below
 		
+	\hfil	
 	
+	
+	
+	\definecolor{light-gray}{gray}{0.95}
+	\lstset{columns=fullflexible, basicstyle=\ttfamily,backgroundcolor=\color{light-gray},xleftmargin=0.1cm,frame=lr,framesep=8pt,framerule=0pt}
+    
+    
+	\begin{lstlisting}
+	
+		S = slack squared 2d matrix
+		OPT[0] = 0
+		#traverse the 2d array to find our traceback
+		for k in range(0, len(S)):
+			for j in range(0, len(S[k]):
+				# find the optimal solution within a given row
+				if (OPT[k] > ( S[j][k] + OPT[j - 1] )) :
+					OPT[k] = S[j][k] + OPT[j - 1]
+		
+		return OPT[len(S)]
+		
+		 
+	\end{lstlisting}
+	
+	\hfil
+	
+
+
+
 \end{solution}
 
 

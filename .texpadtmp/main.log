@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUN 2016 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUN 2016 21:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -228,24 +228,30 @@ Package: ifnextok 2011/06/27 v0.3 test next token (UL)
 \ps@tempboxa=\box44
 \boxtop@sep=\skip47
 \boxbottom@sep=\skip48
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
 ) (./macros.tex
 \c@problemnumber=\count128
 \c@solutionnumber=\count129
 ) (/Users/JuanRuelas/Desktop/Classes/Spring2016/CS141/Projects/03/.texpadtmp/main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
@@ -297,45 +303,45 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count136
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-LaTeX Font Info:    Try loading font information for U+lasy on input line 55.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 57.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 57.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 57.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--78
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
 
  []
 
 [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
@@ -348,21 +354,21 @@ Missing character: There is no ù in font cmr10!
 <images/unbalanced.png, id=12, 512.91624pt x 201.75375pt>
 File: images/unbalanced.png Graphic file (type png)
  <use images/unbalanced.png>
-Package pdftex.def Info: images/unbalanced.png used on input line 89.
+Package pdftex.def Info: images/unbalanced.png used on input line 91.
 (pdftex.def)             Requested size: 199.16928pt x 78.34192pt.
 
-./main.tex:89: Missing $ inserted.
+./main.tex:91: Missing $ inserted.
 <inserted text> 
                 $
-l.89 ...idth=7cm]{images/unbalanced} & \rightarrow
+l.91 ...idth=7cm]{images/unbalanced} & \rightarrow
                                                    &  \includegraphics[width...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:89: Extra }, or forgotten $.
+./main.tex:91: Extra }, or forgotten $.
 <template> \unskip \hfil }
                           \hskip \tabcolsep \endtemplate 
-l.89 ...th=7cm]{images/unbalanced} & \rightarrow &
+l.91 ...th=7cm]{images/unbalanced} & \rightarrow &
                                                     \includegraphics[width=7...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -370,18 +376,18 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-./main.tex:89: Missing $ inserted.
+./main.tex:91: Missing $ inserted.
 <inserted text> 
                 $
-l.89 ...th=7cm]{images/unbalanced} & \rightarrow &
+l.91 ...th=7cm]{images/unbalanced} & \rightarrow &
                                                     \includegraphics[width=7...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./main.tex:89: Missing } inserted.
+./main.tex:91: Missing } inserted.
 <inserted text> 
                 }
-l.89 ...th=7cm]{images/unbalanced} & \rightarrow &
+l.91 ...th=7cm]{images/unbalanced} & \rightarrow &
                                                     \includegraphics[width=7...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -392,38 +398,38 @@ my insertion and my current dilemma will both disappear.
 <images/balanced.png, id=14, 439.6425pt x 171.64125pt>
 File: images/balanced.png Graphic file (type png)
  <use images/balanced.png>
-Package pdftex.def Info: images/balanced.png used on input line 89.
+Package pdftex.def Info: images/balanced.png used on input line 91.
 (pdftex.def)             Requested size: 199.16928pt x 77.7564pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 100.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
 [2 <./images/unbalanced.png> <./images/balanced.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
-[3] (/Users/JuanRuelas/Desktop/Classes/Spring2016/CS141/Projects/03/.texpadtmp/main.aux) ) 
+[3] [4] (/Users/JuanRuelas/Desktop/Classes/Spring2016/CS141/Projects/03/.texpadtmp/main.aux) ) 
 Here is how much of TeX's memory you used:
- 4643 strings out of 493089
- 67531 string characters out of 6134842
- 253507 words of memory out of 5000000
- 8032 multiletter control sequences out of 15000+600000
+ 4695 strings out of 493089
+ 68399 string characters out of 6134842
+ 259407 words of memory out of 5000000
+ 8080 multiletter control sequences out of 15000+600000
  10332 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,10n,37p,598b,928s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,10n,37p,598b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on /Users/JuanRuelas/Desktop/Classes/Spring2016/CS141/Projects/03/.texpadtmp/main.pdf (3 pages, 196494 bytes).
+Output written on /Users/JuanRuelas/Desktop/Classes/Spring2016/CS141/Projects/03/.texpadtmp/main.pdf (4 pages, 199630 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
