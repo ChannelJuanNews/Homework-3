@@ -35,20 +35,6 @@
 % v-- DUE DATE in the braces
 \duedate{Friday, June 3}  
 
-{\fontfamily{ptm}\selectfont 
-
-	\begin{center}
-		\Large \textbf{Disclaimer} \\
-	\end{center}
-	
-	\normalsize This assignment was pretty difficult and because so I have opted to make the explanations of the solutions as best as I can (i.e. layman's terms) since I find it WAY EASIER to understand the problems and present my solutions in a plain manner.
-	
-		\hfil
-		
-	After many many \textbf{MANY} hours of simply trying to understand the problem I found it would be best if I keep the jargon to the utmost minimum since it was the stupid jargon and "buzzwords" that have caused me the most pain during the course of this ENTIRE class. Thank you and I hope you appreciate my solutions. 
-}
-
-
 \medskip
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -110,8 +96,8 @@
 	\hfil
 	
 	\begin{itemize}
-  		\item Take the text and "tokenize" into a word list called $W$
-  		\item Create a matrix of size 
+  		\item Find a recurrence relation for the optimal solution
+  		\item Based on our recurrence relation, create an algorithm to solve our problem
 	\end{itemize}
 	
 	
@@ -120,8 +106,33 @@
 
 	\textbf{A: Recurrence Relation} \\
 	
-	In order to come up with a recurrence relation we need to understand what exactly is dependent on what. In other words, we need to understand what exactly we are computing and how the previous computation affects our current/next computation.
+	In order to come up with a recurrence relation we need to understand what it is we are exactly computing. We are trying to re-arrange the text such that the "slack" or amount of spaces from the last word of every line are evenly distributed among the entirety of the text. This becomes a trivial task until we define what "even" means. Let us assume that "even" means to minimize the sum of all the "slacks". If we were to take this approach we would be left with several different viable solutions. See below for more details. Assume we have a max row width of 10.
 	
+	\hfil
+	
+		\begin{center}
+			\begin{verbatim}
+				                    0123456789                   0123456789
+				                    Ruelas    --> 4              Ruelas    --> 4
+				                    Juan is my--> 0      VS      Juan is   --> 3
+				                    name      --> 6              my name   --> 3
+				                    
+				                    4 + 0 + 6 = 10               4 + 3 + 3 = 10                                     	
+			\end{verbatim}				
+		\end{center} 
+		
+		As you can see from the figure above, since we define "even" to be the minimization of all the slacks of every line, we will have multiple "optimal" solutions. This is a problem since we can reproduce identical slack summations with different text patterns and as we can visually see, the pattern on the right appears to be more "even" than the left one. Because of this, we will define "even" to mean the summation of all the $slacks^2$. This will enable us to be greedy with our spaces and will force us to minimize the amount of slack on $every$ line. See below to see what I mean.
+		
+		\hfil
+		
+		
+		
+		
+		\hfil 
+		
+		\textbf{Slack Squared}\\
+		
+		Since we can see that by calculating the summation of the slacks of each line will give us an  "optimal" solution, 
 	
 	\hfil
 	
